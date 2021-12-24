@@ -31,7 +31,11 @@
 	</scm>
 
 	<properties>
-		<jna-version>5.6.0</jna-version>
+	    <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+		<!--maven.compiler.release>8</maven.compiler.release-->
+		
+		<jna-version>5.10.0</jna-version>
 	</properties>
 
 	<distributionManagement>
@@ -71,7 +75,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.1.1</version>
+                    <version>3.3.1</version>
                     <!-- add this to disable checking under JDK8 -->
                     <configuration>
                         <doclint>none</doclint>
@@ -86,12 +90,12 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-gpg-plugin</artifactId>
-					<version>1.6</version>
+					<version>3.0.1</version>
 				</plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.2.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -163,6 +167,15 @@
 
 
     <profiles>
+		<profile>
+			<id>active-on-jdk-11</id>
+			<activation>
+				<jdk>11</jdk>
+			</activation>
+			<properties>
+				<maven.compiler.release>8</maven.compiler.release>
+			</properties>
+		</profile>	
         <profile>
             <id>release-sign-artifacts</id>
             <activation>
