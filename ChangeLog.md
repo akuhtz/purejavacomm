@@ -1,3 +1,10 @@
+Version 1.0.5
+* Upgraded maven pom to use JNA 5.11.0
+* Added OSGi headers
+
+Version 1.0.4
+* Upgraded maven pom to use JNA 5.10.0
+
 Version 1.0.3.2
 
 * Upgraded maven pom to use JNA 5.6.0
