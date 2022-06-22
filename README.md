@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    compile "org.bidib.com.github.purejavacomm:purejavacomm:1.0.4"
+    compile "org.bidib.com.github.purejavacomm:purejavacomm:1.0.5"
 }
 ```
 Using Maven:
@@ -29,6 +29,6 @@ Using Maven:
 <dependency>
     <groupId>org.bidib.com.github.purejavacomm</groupId>
     <artifactId>purejavacomm</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
 </dependency>
 ```
